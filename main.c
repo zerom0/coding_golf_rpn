@@ -1,17 +1,20 @@
-#define P s[p-1]
-#define A if(*v[i]==
-#define Z s[p]; continue;}
-int s[9], p, i=1;
+#include <stdlib.h>
+#include <printf.h>
+
+#define X(x) if(*v[i]==*#x) {s[p-1]x##=s[p]; goto G;}
+int p, i=1, s[];
 main(int c, char** v) {
-  for (; i<c; i++) {
+  while (i<c) {
     --p;
-    A'+') {P+= Z
-    A'-') {P-= Z
-    A'*') {P*= Z
-    A'/') {P/= Z
+    X(+)
+    X(-)
+    X(*)
+    X(/)
     s[++p] = atoi(v[i]);
     p++;
+G:
+    i++;
   }
 
-  printf("%d", P);
+  printf("%d", s[p-1]);
 }
