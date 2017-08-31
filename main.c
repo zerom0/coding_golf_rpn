@@ -1,20 +1,20 @@
-
+#define X s[p-1]
 main(int c, char** v) {
   int s[9], p=-1;
   for (int i=1; i<c; i++) {
     --p;
     switch(*v[i]) {
       case '+':
-        s[p-1] = s[p-1] + s[p];
+        X = X + s[p];
         break;
       case '-':
-        s[p-1] = s[p-1] - s[p];
+        X = X - s[p];
         break;
       case '*':
-        s[p-1] = s[p-1] * s[p];
+        X = X * s[p];
         break;
       case '/':
-        s[p-1] = s[p-1] / s[p];
+        X = X / s[p];
         break;
       default:
         s[++p] = atoi(v[i]);
@@ -22,5 +22,5 @@ main(int c, char** v) {
     }
   }
 
-  printf("%d", s[p-1]);
+  printf("%d", X);
 }
