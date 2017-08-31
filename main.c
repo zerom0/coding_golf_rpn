@@ -1,9 +1,6 @@
-#include <stdlib.h>
-#include <printf.h>
-
 #define X(x) if(*v[i]==*#x) {s[p-1]x##=s[p]; continue;}
-int p, i, s[];
-main(int c, char** v) {
+p, i, s[];
+main(c,  v) char** v; {
   while (++i<c) {
     --p;
     X(+)
