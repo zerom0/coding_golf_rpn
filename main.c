@@ -1,25 +1,16 @@
 #define P s[p-1]
+#define A if(*v[i]==
+#define Z s[p]; continue;}
+int s[9], p, i=1;
 main(int c, char** v) {
-  int s[9], p=-1;
-  for (int i=1; i<c; i++) {
+  for (; i<c; i++) {
     --p;
-    switch(*v[i]) {
-      case '+':
-        P += s[p];
-        break;
-      case '-':
-        P -= s[p];
-        break;
-      case '*':
-        P *= s[p];
-        break;
-      case '/':
-        P /= s[p];
-        break;
-      default:
-        s[++p] = atoi(v[i]);
-        p++;
-    }
+    A'+') {P+= Z
+    A'-') {P-= Z
+    A'*') {P*= Z
+    A'/') {P/= Z
+    s[++p] = atoi(v[i]);
+    p++;
   }
 
   printf("%d", P);
