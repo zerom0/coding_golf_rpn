@@ -1,14 +1,14 @@
-#define X(x) if(*v[i]==*#x) s[p-1]x##=s[--p]; else
+#define X(x) if(**v==*#x) s[p-1]x##=s[--p]; else
 
-p, i, s[];
+p, s[];
 
 main(c,  v) char** v; {
-  while (++i < c)
+  while (++v, --c)
     X(+)
     X(-)
     X(*)
     X(/)
-    s[p++] = atoi(v[i]);
+    s[p++] = atoi(*v);
 
   printf("%d", s[p-1]);
 }
