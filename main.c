@@ -1,4 +1,4 @@
-#define X(x) if(**v==*#x) *(p-1)x##=*--p; else
+#define X(x) **v==*#x ? *(p-1)x##=*--p :
 
 *p, s[];
 
@@ -9,7 +9,7 @@ main(c,  v) char** v; {
     X(-)
     X(*)
     X(/)
-    *p++ = atoi(*v);
+    (*p++ = atoi(*v));
 
   printf("%d", *--p);
 }
